@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALORANT Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">V</div>
+          <div>
+            <h1>VALORANT</h1>
+            <p>Companion</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-prompt="Tư vấn build agent cho tôi">Build</button>
+          <button class="nav-item" data-prompt="Gợi ý team comp cho map Lotus">Team Comp</button>
+          <button class="nav-item" data-prompt="Mẹo chơi rank mới bắt đầu">Tips</button>
+          <button class="nav-item" data-prompt="Hướng dẫn chọn agent theo vai trò">Agent Guide</button>
+        </nav>
+
+        <div class="meta-card">
+          <p class="label">Mode</p>
+          <strong>Competitive</strong>
+        </div>
+
+        <div class="meta-card">
+          <p class="label">Focus</p>
+          <strong>Rank Up</strong>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">GAME ASSISTANT</p>
+            <h2>VALORANT Strategy Hub</h2>
+          </div>
+          <div class="status-pill">Online</div>
+        </header>
+
+        <section class="quick-grid">
+          <div class="quick-card">
+            <span class="card-tag">Build</span>
+            <h3>Best Weapon Setup</h3>
+            <p>Phù hợp với pháo thủ và utility-heavy agent.</p>
+          </div>
+          <div class="quick-card">
+            <span class="card-tag">Map</span>
+            <h3>Lotus Control</h3>
+            <p>Tối ưu đường đường chặn và utility rotation.</p>
+          </div>
+          <div class="quick-card">
+            <span class="card-tag">Agent</span>
+            <h3>Role-based Tips</h3>
+            <p>Hướng dẫn chọn agent theo phản ứng và phong cách chơi.</p>
+          </div>
+        </section>
+
+        <section class="chat-panel">
+          <div id="chatMessages" class="chat-messages" aria-live="polite">
+            <div class="message bot">
+              <div class="avatar">V</div>
+              <div class="bubble">
+                <strong>VALORANT Coach</strong>
+                <p>Xin chào! Tôi có thể giúp bạn lên build, team comp, map control và chiến thuật rank. Hỏi tôi bất cứ điều gì về game.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="suggestions" id="suggestions">
+            <button class="chip" data-prompt="Cho tôi build cho agent Jett hay Raze?">Build agent</button>
+            <button class="chip" data-prompt="Mẹo rank lên sao cho chơi team comp hiệu quả?">Rank tips</button>
+            <button class="chip" data-prompt="Map nào dễ control nếu mình chơi controller?">Map guide</button>
+            <button class="chip" data-prompt="Cách chọn agent theo role và phong cách chơi?">Agent selection</button>
+          </div>
+
+          <div class="composer">
+            <input id="messageInput" type="text" placeholder="Nhập câu hỏi của bạn về VALORANT..." />
+            <button id="sendButton" type="button">Send</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
